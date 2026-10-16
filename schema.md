@@ -55,3 +55,11 @@
 - La clé etrangere n'est pas non null car il est possible que le client soit pas un habitué non enregistrer
 
 ## Étape 5 – Serveurs et tables
+[nouveau]
+- serveur(**id_serveur**, nom)
+- table_salle(**id_table**), necessaire plustard si on ajoute d'autre information au table
+
+[modification]
+- ajouter seruveur à commande 
+- ajouter table à commande 
+- commande(**id_commande**, date_commande, #id_client, #id_serveur, #id_table) 
