@@ -12,3 +12,9 @@ FROM categorie c
 GROUP BY c.id_categorie
 ORDER BY c.id_categorie;
 
+-- montant total de chaque commande
+SELECT c.id_commande, c.date_commande, sum(cl.quantite * p.prix)
+FROM commande c
+JOIN commande_ligne cl on cl.id_commande = c.id_commande
+JOIN plat p on p.id_plat = cl.id_plat
+GROUP BY c.id_commande
