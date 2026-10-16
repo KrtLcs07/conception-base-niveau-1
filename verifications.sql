@@ -18,3 +18,13 @@ FROM commande c
 JOIN commande_ligne cl on cl.id_commande = c.id_commande
 JOIN plat p on p.id_plat = cl.id_plat
 GROUP BY c.id_commande
+
+-- iste des commandes avec le nom du client, en affichant « client de passage » quand il n'y en a pas.
+SELECT 
+    c.id_commande,
+    c.date_commande,
+    COALESCE(cl.nom, 'client de passage') AS nom_client
+FROM 
+    commande c
+LEFT JOIN 
+    client cl ON c.id_client = cl.id_client;

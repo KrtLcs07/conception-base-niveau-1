@@ -44,3 +44,14 @@
 ### Piege  :
 - j'ai placé la quantité dans la commande ligne car c'est la ligne de commande qui contient la quantite d'un plat et non une commande d'une date
  
+ ## Étape 4 – Les habitués
+ [nouveua]
+- client(**id_client**, nom, telephone)
+  
+[modifié]
+- ajout de la colonne client au commande : commande(**id_commande**, date_commande, #id_client) 
+
+### Piege  :
+- La clé etrangere n'est pas non null car il est possible que le client soit pas un habitué non enregistrer
+
+## Étape 5 – Serveurs et tables
